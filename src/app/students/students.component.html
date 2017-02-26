@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row" *ngFor="let student of students">
+    <div class="card card-block">
+      <h4 class="card-title">{{student.name}}</h4>
+      <p class="card-text">{{student.website}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Search by ID</h2>
+    <input type="text" [(ngModel)]="id" size="5" />
+    <input type="button" value="Search" (click)="findStudent(id)" />
+    <p>{{result.name}} {{result.website}}</p>
+  </div>
+</div>
